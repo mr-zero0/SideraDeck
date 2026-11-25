@@ -1,0 +1,163 @@
+{
+  "time": {
+    "defaultRate": 1,
+    "minDate": "1900-01-01T00:00:00Z",
+    "maxDate": "2100-12-31T23:59:59Z",
+    "ratePresets": [
+      { "label": "-30 d/s", "rate": -2592000 },
+      { "label": "-1 d/s", "rate": -86400 },
+      { "label": "-1 h/s", "rate": -3600 },
+      { "label": "Real time", "rate": 1 },
+      { "label": "1 h/s", "rate": 3600 },
+      { "label": "1 d/s", "rate": 86400 },
+      { "label": "30 d/s", "rate": 2592000 }
+    ]
+  },
+  "scaleModes": {
+    "navigable": {
+      "distance": { "unitsPerAuPow": 40, "exponent": 0.5 },
+      "radius": { "unitsPerKmPow": 0.012, "exponent": 0.4 }
+    },
+    "true": {
+      "unitsPerKm": 0.000001
+    }
+  },
+  "lighting": {
+    "ambient": 0.035,
+    "sunIntensity": 1.6,
+    "terminatorSoftness": 0.12,
+    "nightLightsIntensity": 1.4,
+    "cloudMinShellScale": 1.004
+  },
+  "geometry": {
+    "sphereSegments": 96,
+    "ringSegments": 160
+  },
+  "camera": {
+    "fovDeg": 45,
+    "near": 0.000001,
+    "nearFractionOfDistance": 0.001,
+    "far": 10000000,
+    "orbitDistanceInRadii": 3,
+    "minDistanceInRadii": 1.15,
+    "transitionLambda": 3.2,
+    "transitionSettleRatio": 0.001,
+    "framingSettleRatio": 0.01,
+    "framingSettleAngleRad": 0.001,
+    "controls": { "dampingFactor": 0.08, "rotateSpeed": 0.5, "zoomSpeed": 2.5 },
+    "litViewAngleDeg": 55,
+    "litViewElevation": 0.25,
+    "initialBodyId": "earth"
+  },
+  "pov": {
+    "scaleJump": {
+      "planetaryFrameInRadii": 14,
+      "moonFrameMultiple": 2.2,
+      "solarFrameAu": 32,
+      "galacticCameraDistancePc": 650
+    }
+  },
+  "optics": {
+    "eyeFovDeg": 60,
+    "minFovDeg": 0.005,
+    "maxFovDeg": 75,
+    "eyeLimitingMagnitude": 6.5,
+    "wheelZoomPerDeltaY": 0.0012,
+    "presets": [
+      { "id": "eye", "label": "Naked eye", "fovDeg": 60 },
+      { "id": "binoculars", "label": "Binoculars", "fovDeg": 6 },
+      { "id": "telescope", "label": "Telescope", "fovDeg": 0.4 },
+      { "id": "observatory", "label": "Observatory", "fovDeg": 0.06 }
+    ],
+    "eyepieceBelowFovDeg": 10
+  },
+  "vantage": {
+    "eyeHeightM": 1.8,
+    "walkSpeedMs": 6,
+    "runMultiplier": 8,
+    "earthriseElevationDeg": 12,
+    "earthshineIntensity": 0.35,
+    "airlessGlareStarFade": 0.6,
+    "sunGlareDeg": 6,
+    "noTerrainBodyIds": ["jupiter", "saturn", "uranus", "neptune"],
+    "terrain": {
+      "radiusM": 9000,
+      "rings": 72,
+      "segments": 160,
+      "innerRadiusM": 0.6,
+      "octaves": [
+        { "wavelengthM": 900, "amplitudeM": 14 },
+        { "wavelengthM": 140, "amplitudeM": 3 },
+        { "wavelengthM": 22, "amplitudeM": 0.6 },
+        { "wavelengthM": 3.5, "amplitudeM": 0.12 }
+      ]
+    },
+    "skyDomeScale": 1.03,
+    "targetElevationDeg": 40,
+    "twilightSunDepthDeg": 6,
+    "trackLambda": 8,
+    "maxPitchDeg": 89,
+    "craftMarkerRadiusKm": 0.005,
+    "earthId": "earth",
+    "earthVantageTargetId": "moon"
+  },
+  "events": {
+    "eclipsesEach": 2,
+    "lunarEclipseLonDeg": 55,
+    "eclipseFovDeg": 3,
+    "transitSunElevationDeg": 40,
+    "transitFovDeg": 0.7,
+    "oppositionFovDeg": 0.1,
+    "sunTogetherDeg": 5
+  },
+  "skies": {
+    "note": "Single-scattering atmospheres seen from the ground. Coefficients per km at the surface; Mars and Venus are approximations tuned to rover and lander imagery (butterscotch Martian day, blue Martian sunset, orange Venus haze).",
+    "bodies": {
+      "earth": { "thicknessKm": 60, "rayleigh": [0.0058, 0.0135, 0.0331], "rayleighHeightKm": 8, "mie": [0.021, 0.021, 0.021], "mieHeightKm": 1.2, "mieG": 0.76, "sunIntensity": 22, "hazeKm": 25 },
+      "mars": { "thicknessKm": 80, "rayleigh": [0.00002, 0.00005, 0.00012], "rayleighHeightKm": 11.1, "mie": [0.034, 0.022, 0.013], "mieHeightKm": 11.1, "mieG": 0.88, "sunIntensity": 14, "forwardTint": [0.45, 0.65, 1.0], "hazeKm": 12 },
+      "venus": { "thicknessKm": 90, "rayleigh": [0.06, 0.14, 0.34], "rayleighHeightKm": 15.9, "mie": [0.09, 0.07, 0.03], "mieHeightKm": 15.9, "mieG": 0.7, "sunIntensity": 6, "hazeKm": 3 }
+    }
+  },
+  "orbits": {
+    "samples": 360,
+    "opacity": 0.22,
+    "selectedOpacity": 0.55,
+    "lineWidthPx": 1,
+    "resampleFraction": 0.125
+  },
+  "markers": {
+    "sizePx": 5,
+    "hideAboveRadiusPx": 10
+  },
+  "quality": {
+    "hiResOnPx": 480,
+    "hiResOffPx": 220,
+    "hiResSphereSegments": 256,
+    "maxDpr": 2,
+    "phoneMaxDpr": 1.5,
+    "skySteps": { "view": 12, "light": 6 },
+    "phoneSkySteps": { "view": 8, "light": 4 },
+    "starLabelMagnitude": 2.0
+  },
+  "hud": {
+    "liveRefreshMs": 250
+  },
+  "starfield": {
+    "dataUrl": "/data/hyg_stars.json",
+    "catalogFaintestMagnitude": 7.5,
+    "namedStarMagnitude": 3.0,
+    "milkyWayColor": "#cfd6e6",
+    "milkyWayIntensity": 0.09,
+    "vantageStarGlowScale": 1.6,
+    "vantageStarGlowOpacity": 0.18,
+    "sphereRadius": 1000000,
+    "unitsPerParsec": 10,
+    "brightestMagnitude": -1.5,
+    "faintestMagnitude": 6.0,
+    "maxPointSizePx": 4.5,
+    "minPointSizePx": 0.9,
+    "minAlpha": 0.25,
+    "galacticCenterLabelPc": 300,
+    "galacticCenterDistanceKpc": 8.18
+  }
+}

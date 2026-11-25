@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "source": "Positions (J2000), distances, diameters, position angles and inclinations from published values (NED / SIMBAD summaries)",
+  "unitsPerKpc": 1,
+  "cameraDistanceKpc": 1100,
+  "milkyWay": { "name": "Milky Way", "diameterKpc": 30, "sunToCenterKpc": 8.18, "color": "#e8dcc8" },
+  "galaxies": [
+    { "id": "lmc", "name": "Large Magellanic Cloud", "raDeg": 80.894, "decDeg": -69.756, "distanceKpc": 49.97, "diameterKpc": 9.86, "positionAngleDeg": 170, "inclinationDeg": 35, "type": "irregular", "color": "#d9e2f2" },
+    { "id": "smc", "name": "Small Magellanic Cloud", "raDeg": 13.187, "decDeg": -72.828, "distanceKpc": 62.44, "diameterKpc": 5.78, "positionAngleDeg": 45, "inclinationDeg": 65, "type": "irregular", "color": "#d9e2f2" },
+    { "id": "andromeda", "name": "Andromeda (M31)", "raDeg": 10.6847, "decDeg": 41.269, "distanceKpc": 765, "diameterKpc": 46.56, "positionAngleDeg": 35, "inclinationDeg": 77, "type": "spiral", "color": "#f0e2c8" },
+    { "id": "triangulum", "name": "Triangulum (M33)", "raDeg": 23.462, "decDeg": 30.66, "distanceKpc": 840, "diameterKpc": 18.74, "positionAngleDeg": 23, "inclinationDeg": 55, "type": "spiral", "color": "#dfe6f4" }
+  ]
+}

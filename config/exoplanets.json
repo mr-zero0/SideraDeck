@@ -1,0 +1,61 @@
+{
+  "version": 1,
+  "source": "NASA Exoplanet Archive, Planetary Systems Composite Parameters (pscomppars), retrieved 2026-11-25",
+  "queryUrl": "https://exoplanetarchive.ipac.caltech.edu/TAP/sync?query=select%20pl_name%2Chostname%2Cra%2Cdec%2Csy_dist%2Cst_teff%2Cst_rad%2Cst_mass%2Csy_vmag%2Cpl_orbsmax%2Cpl_orbper%2Cpl_rade%2Cpl_radelim%2Cpl_bmasse%2Cpl_bmasselim%2Cpl_bmassprov%2Cpl_eqt%2Cpl_insol%2Cpl_orbeccen%2Cdisc_year%2Cdiscoverymethod%2Cpl_orbsmax_reflink%2Cpl_rade_reflink%2Cpl_bmasse_reflink%20from%20pscomppars%20where%20pl_name%20in%20('Proxima%20Cen%20b'%2C'TRAPPIST-1%20e')&format=json",
+  "note": "Measured values come from the archive. Everything under 'illustrative' (ground colour, atmosphere) is an artist's choice: nobody has seen these surfaces. The standing spot and orbital phase are chosen so the host star sits low and the Sun is above the horizon; both planets are assumed tidally locked.",
+  "view": { "hostElevationDeg": 4, "solElevationDeg": 32, "solAzimuthFromHostDeg": 150 },
+  "planets": [
+    {
+      "id": "proxima-b",
+      "name": "Proxima Centauri b",
+      "archiveName": "Proxima Cen b",
+      "host": { "name": "Proxima Centauri", "hygName": "Proxima Centauri", "raDeg": 217.3934657, "decDeg": -62.6761821, "distancePc": 1.30119, "teffK": 2900, "radiusSolar": 0.141 },
+      "planet": {
+        "semiMajorAu": 0.04848,
+        "periodDays": 11.18465,
+        "radiusEarth": 1.02,
+        "radiusMeasured": false,
+        "massEarth": 1.055,
+        "massIsMinimum": true,
+        "eqTempK": 218,
+        "insolationEarth": 0.641,
+        "discoveryYear": 2016,
+        "discoveryMethod": "Radial Velocity"
+      },
+      "reference": { "label": "Suárez Mascareño et al. 2025", "url": "https://ui.adsabs.harvard.edu/abs/2025A&A...700A..11M/abstract" },
+      "illustrative": {
+        "groundColor": "#4a3f3b",
+        "hazeColor": "#6e4a3c",
+        "visibleLight": 0.35,
+        "sky": { "thicknessKm": 60, "rayleigh": [0.0058, 0.0135, 0.0331], "rayleighHeightKm": 8, "mie": [0.021, 0.021, 0.021], "mieHeightKm": 1.2, "mieG": 0.76, "sunIntensity": 22, "hazeKm": 25 },
+        "note": "Rocky ground under a thin Earth-like air. Whether Proxima b keeps any atmosphere under its star's flares is unknown."
+      }
+    },
+    {
+      "id": "trappist-1e",
+      "name": "TRAPPIST-1e",
+      "archiveName": "TRAPPIST-1 e",
+      "host": { "name": "TRAPPIST-1", "raDeg": 346.6263919, "decDeg": -5.0434618, "distancePc": 12.42988881, "teffK": 2566, "radiusSolar": 0.1192 },
+      "planet": {
+        "semiMajorAu": 0.02925,
+        "periodDays": 6.101013,
+        "radiusEarth": 0.92,
+        "radiusMeasured": true,
+        "massEarth": 0.692,
+        "massIsMinimum": false,
+        "eqTempK": 249.7,
+        "insolationEarth": 0.646,
+        "discoveryYear": 2017,
+        "discoveryMethod": "Transit"
+      },
+      "reference": { "label": "Agol et al. 2021", "url": "https://ui.adsabs.harvard.edu/abs/2021PSJ.....2....1A/abstract" },
+      "illustrative": {
+        "groundColor": "#6d6560",
+        "hazeColor": "#7a5a4c",
+        "visibleLight": 0.25,
+        "sky": { "thicknessKm": 70, "rayleigh": [0.0058, 0.0135, 0.0331], "rayleighHeightKm": 9, "mie": [0.03, 0.03, 0.03], "mieHeightKm": 1.5, "mieG": 0.8, "sunIntensity": 22, "hazeKm": 18 },
+        "note": "Frosty rock under a nitrogen-like air. JWST has not yet shown whether TRAPPIST-1e has an atmosphere."
+      }
+    }
+  ]
+}

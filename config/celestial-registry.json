@@ -1,0 +1,280 @@
+{
+  "version": 1,
+  "sources": {
+    "nasaFactSheet": "NASA NSSDCA Planetary Fact Sheet, https://nssdc.gsfc.nasa.gov/planetary/factsheet/",
+    "nasaSunFactSheet": "NASA NSSDCA Sun Fact Sheet, https://nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html",
+    "iauNominalSun": "IAU 2015 Resolution B3 nominal solar radius",
+    "solarSystemScope": "Solar System Scope textures, CC BY 4.0, https://www.solarsystemscope.com/textures/"
+  },
+  "bodies": [
+    {
+      "id": "sun",
+      "name": "Sun",
+      "kind": "star",
+      "parentId": null,
+      "ephemerisBody": "Sun",
+      "telemetry": {
+        "radiusKm": 695700,
+        "massKg": 1.9885e30,
+        "surfaceGravityMs2": 274.0,
+        "escapeVelocityKms": 617.6,
+        "siderealRotationHours": 609.12,
+        "orbitalPeriodDays": null,
+        "meanTemperatureC": 5499,
+        "geometricAlbedo": null,
+        "axialTiltDeg": 7.25,
+        "sourceKeys": ["nasaSunFactSheet", "iauNominalSun"]
+      },
+      "render": {
+        "emissive": true,
+        "albedoMap": "/textures/2k_sun.jpg",
+        "hiRes": { "albedoMap": "/textures/hires/8k_sun.jpg" },
+        "fallbackColor": "#ffcf7a",
+        "atmosphere": { "color": "#ffb347", "intensity": 1.4, "power": 2.2, "scale": 1.12 }
+      },
+      "missions": ["SOHO", "Parker Solar Probe", "Solar Orbiter"]
+    },
+    {
+      "id": "mercury",
+      "name": "Mercury",
+      "kind": "planet",
+      "parentId": "sun",
+      "ephemerisBody": "Mercury",
+      "telemetry": {
+        "radiusKm": 2439.7,
+        "massKg": 3.30e23,
+        "surfaceGravityMs2": 3.7,
+        "escapeVelocityKms": 4.3,
+        "siderealRotationHours": 1407.6,
+        "orbitalPeriodDays": 88.0,
+        "meanTemperatureC": 167,
+        "geometricAlbedo": 0.142,
+        "axialTiltDeg": 0.034,
+        "sourceKeys": ["nasaFactSheet"]
+      },
+      "render": {
+        "emissive": false,
+        "albedoMap": "/textures/2k_mercury.jpg",
+        "hiRes": { "albedoMap": "/textures/hires/8k_mercury.jpg" },
+        "fallbackColor": "#9a9590"
+      },
+      "missions": ["Mariner 10", "MESSENGER", "BepiColombo"]
+    },
+    {
+      "id": "venus",
+      "name": "Venus",
+      "kind": "planet",
+      "parentId": "sun",
+      "ephemerisBody": "Venus",
+      "telemetry": {
+        "radiusKm": 6051.8,
+        "massKg": 4.87e24,
+        "surfaceGravityMs2": 8.9,
+        "escapeVelocityKms": 10.4,
+        "siderealRotationHours": -5832.5,
+        "orbitalPeriodDays": 224.7,
+        "meanTemperatureC": 464,
+        "geometricAlbedo": 0.689,
+        "axialTiltDeg": 177.4,
+        "sourceKeys": ["nasaFactSheet"]
+      },
+      "render": {
+        "emissive": false,
+        "albedoMap": "/textures/2k_venus_atmosphere.jpg",
+        "hiRes": { "albedoMap": "/textures/hires/4k_venus_atmosphere.jpg" },
+        "fallbackColor": "#e3c58f",
+        "atmosphere": { "color": "#f0d9a6", "intensity": 0.9, "power": 3.0, "scale": 1.04 }
+      },
+      "missions": ["Magellan", "Venus Express", "Akatsuki"]
+    },
+    {
+      "id": "earth",
+      "name": "Earth",
+      "kind": "planet",
+      "parentId": "sun",
+      "ephemerisBody": "Earth",
+      "telemetry": {
+        "radiusKm": 6378.1,
+        "massKg": 5.97e24,
+        "surfaceGravityMs2": 9.8,
+        "escapeVelocityKms": 11.2,
+        "siderealRotationHours": 23.9,
+        "orbitalPeriodDays": 365.2,
+        "meanTemperatureC": 15,
+        "geometricAlbedo": 0.434,
+        "axialTiltDeg": 23.4,
+        "sourceKeys": ["nasaFactSheet"]
+      },
+      "render": {
+        "emissive": false,
+        "albedoMap": "/textures/2k_earth_daymap.jpg",
+        "hiRes": { "albedoMap": "/textures/hires/8k_earth_daymap.jpg", "nightMap": "/textures/hires/8k_earth_nightmap.jpg", "cloudsMap": "/textures/hires/8k_earth_clouds.jpg" },
+        "nightMap": "/textures/2k_earth_nightmap.jpg",
+        "clouds": { "map": "/textures/2k_earth_clouds.jpg", "altitudeKm": 12, "driftDegPerHour": 1.5 },
+        "fallbackColor": "#3d6fb6",
+        "atmosphere": { "color": "#6fa8ff", "intensity": 1.1, "power": 3.2, "scale": 1.025, "forwardColor": "#ff6a2e", "forwardIntensity": 3.5 }
+      },
+      "missions": ["Terra", "Aqua", "Landsat 9", "DSCOVR"]
+    },
+    {
+      "id": "moon",
+      "name": "Moon",
+      "kind": "moon",
+      "parentId": "earth",
+      "ephemerisBody": "Moon",
+      "telemetry": {
+        "radiusKm": 1737.4,
+        "massKg": 7.3e22,
+        "surfaceGravityMs2": 1.6,
+        "escapeVelocityKms": 2.4,
+        "siderealRotationHours": 655.7,
+        "orbitalPeriodDays": 27.3,
+        "meanTemperatureC": -20,
+        "geometricAlbedo": 0.12,
+        "axialTiltDeg": 6.7,
+        "sourceKeys": ["nasaFactSheet"]
+      },
+      "render": {
+        "emissive": false,
+        "albedoMap": "/textures/2k_moon.jpg",
+        "hiRes": { "albedoMap": "/textures/hires/8k_moon.jpg" },
+        "fallbackColor": "#a8a8a8"
+      },
+      "missions": ["Apollo", "Lunar Reconnaissance Orbiter", "Chandrayaan-3", "Artemis"]
+    },
+    {
+      "id": "mars",
+      "name": "Mars",
+      "kind": "planet",
+      "parentId": "sun",
+      "ephemerisBody": "Mars",
+      "telemetry": {
+        "radiusKm": 3396.2,
+        "massKg": 6.42e23,
+        "surfaceGravityMs2": 3.7,
+        "escapeVelocityKms": 5.0,
+        "siderealRotationHours": 24.6,
+        "orbitalPeriodDays": 687.0,
+        "meanTemperatureC": -65,
+        "geometricAlbedo": 0.170,
+        "axialTiltDeg": 25.2,
+        "sourceKeys": ["nasaFactSheet"]
+      },
+      "render": {
+        "emissive": false,
+        "albedoMap": "/textures/2k_mars.jpg",
+        "hiRes": { "albedoMap": "/textures/hires/8k_mars.jpg" },
+        "fallbackColor": "#b5603a",
+        "atmosphere": { "color": "#e0a074", "intensity": 0.55, "power": 4.0, "scale": 1.015 }
+      },
+      "missions": ["Viking", "Mars Reconnaissance Orbiter", "Curiosity", "Perseverance"]
+    },
+    {
+      "id": "jupiter",
+      "name": "Jupiter",
+      "kind": "planet",
+      "parentId": "sun",
+      "ephemerisBody": "Jupiter",
+      "telemetry": {
+        "radiusKm": 71492,
+        "massKg": 1.898e27,
+        "surfaceGravityMs2": 23.1,
+        "escapeVelocityKms": 59.5,
+        "siderealRotationHours": 9.9,
+        "orbitalPeriodDays": 4331,
+        "meanTemperatureC": -110,
+        "geometricAlbedo": 0.538,
+        "axialTiltDeg": 3.1,
+        "sourceKeys": ["nasaFactSheet"]
+      },
+      "render": {
+        "emissive": false,
+        "albedoMap": "/textures/2k_jupiter.jpg",
+        "hiRes": { "albedoMap": "/textures/hires/8k_jupiter.jpg" },
+        "fallbackColor": "#c9a77c",
+        "atmosphere": { "color": "#e3cfa8", "intensity": 0.7, "power": 3.5, "scale": 1.02 }
+      },
+      "missions": ["Galileo", "Juno", "JUICE", "Europa Clipper"]
+    },
+    {
+      "id": "saturn",
+      "name": "Saturn",
+      "kind": "planet",
+      "parentId": "sun",
+      "ephemerisBody": "Saturn",
+      "telemetry": {
+        "radiusKm": 60268,
+        "massKg": 5.68e26,
+        "surfaceGravityMs2": 9.0,
+        "escapeVelocityKms": 35.5,
+        "siderealRotationHours": 10.7,
+        "orbitalPeriodDays": 10747,
+        "meanTemperatureC": -140,
+        "geometricAlbedo": 0.499,
+        "axialTiltDeg": 26.7,
+        "sourceKeys": ["nasaFactSheet"]
+      },
+      "render": {
+        "emissive": false,
+        "albedoMap": "/textures/2k_saturn.jpg",
+        "hiRes": { "albedoMap": "/textures/hires/8k_saturn.jpg", "ringMap": "/textures/hires/8k_saturn_ring_alpha.png" },
+        "fallbackColor": "#d8c08e",
+        "atmosphere": { "color": "#efdcab", "intensity": 0.6, "power": 3.5, "scale": 1.02 },
+        "ring": { "innerRadiusKm": 74658, "outerRadiusKm": 136775, "map": "/textures/2k_saturn_ring_alpha.png" }
+      },
+      "missions": ["Pioneer 11", "Voyager 1", "Voyager 2", "Cassini-Huygens"]
+    },
+    {
+      "id": "uranus",
+      "name": "Uranus",
+      "kind": "planet",
+      "parentId": "sun",
+      "ephemerisBody": "Uranus",
+      "telemetry": {
+        "radiusKm": 25559,
+        "massKg": 8.68e25,
+        "surfaceGravityMs2": 8.7,
+        "escapeVelocityKms": 21.3,
+        "siderealRotationHours": -17.2,
+        "orbitalPeriodDays": 30589,
+        "meanTemperatureC": -195,
+        "geometricAlbedo": 0.488,
+        "axialTiltDeg": 97.8,
+        "sourceKeys": ["nasaFactSheet"]
+      },
+      "render": {
+        "emissive": false,
+        "albedoMap": "/textures/2k_uranus.jpg",
+        "fallbackColor": "#9fd6dd",
+        "atmosphere": { "color": "#b5eef2", "intensity": 0.6, "power": 3.0, "scale": 1.025 }
+      },
+      "missions": ["Voyager 2"]
+    },
+    {
+      "id": "neptune",
+      "name": "Neptune",
+      "kind": "planet",
+      "parentId": "sun",
+      "ephemerisBody": "Neptune",
+      "telemetry": {
+        "radiusKm": 24764,
+        "massKg": 1.02e26,
+        "surfaceGravityMs2": 11.0,
+        "escapeVelocityKms": 23.5,
+        "siderealRotationHours": 16.1,
+        "orbitalPeriodDays": 59800,
+        "meanTemperatureC": -200,
+        "geometricAlbedo": 0.442,
+        "axialTiltDeg": 28.3,
+        "sourceKeys": ["nasaFactSheet"]
+      },
+      "render": {
+        "emissive": false,
+        "albedoMap": "/textures/2k_neptune.jpg",
+        "fallbackColor": "#4f78d6",
+        "atmosphere": { "color": "#6f9bff", "intensity": 0.75, "power": 3.0, "scale": 1.025 }
+      },
+      "missions": ["Voyager 2"]
+    }
+  ]
+}

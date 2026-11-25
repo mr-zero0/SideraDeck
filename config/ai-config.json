@@ -1,0 +1,83 @@
+{
+  "version": 1,
+  "defaultTierId": "cadet",
+  "limits": {
+    "maxQuestionChars": 400,
+    "maxAnswerSentences": 6,
+    "maxOutputTokens": 450,
+    "temperature": 0.1
+  },
+  "tiers": [
+    {
+      "id": "explorer",
+      "label": "Explorer",
+      "ages": "5-8",
+      "readingGrade": {
+        "min": 0,
+        "max": 3.5
+      },
+      "maxWordsPerSentence": 12,
+      "allowEquations": false,
+      "excludedProviders": [
+        "gemini"
+      ],
+      "style": "Target Flesch-Kincaid grade 1.5 to 2.8. Write 4 natural sentences, each 7 to 10 words long (never over 11). Use simple 1-to-2 syllable words (sun, sky, hot, cold, gas, dust, rock, ice, spin, bright, big, dot). Only include numbers or mission names if the question asks for a size, number, or distance. Compare sizes to balls, cars, or houses; no jargon or equations. Example: 'Mars is a cold planet with red dust. Its thin air holds very little heat. Robots drive across the rocky ground.'"
+    },
+    {
+      "id": "cadet",
+      "label": "Cadet",
+      "ages": "9-13",
+      "readingGrade": {
+        "min": 3,
+        "max": 7.5
+      },
+      "maxWordsPerSentence": 18,
+      "allowEquations": false,
+      "excludedProviders": [],
+      "style": "Target Flesch-Kincaid grade 4.5 to 6.5. Write 3 to 5 sentences, 11 to 14 words each (strictly never over 16). Explain cause and effect in everyday middle-school science words (gravity, orbit, planet, surface, sunlight, atmosphere, seasons) and mention only the verified facts needed for the question. Define any science term simply, and write numbers in digits with short symbols (km, °C, hours, days). Example: 'Thick clouds trap heat like a blanket, so the planet surface stays scorching hot. Its slow backward spin makes the Sun rise in the west.'"
+    },
+    {
+      "id": "scholar",
+      "label": "Scholar",
+      "ages": "14-18",
+      "readingGrade": {
+        "min": 7,
+        "max": 12.5
+      },
+      "maxWordsPerSentence": 24,
+      "allowEquations": true,
+      "excludedProviders": [],
+      "style": "Target Flesch-Kincaid grade 8.5 to 11.0. Write 3 to 4 connected sentences, 12 to 17 words each (strictly never over 20), without semicolons. Explain physical causes rather than listing isolated stats, using core astrophysics terms (albedo, escape velocity, tidal locking, greenhouse effect, magnetic field) and only relevant verified figures."
+    },
+    {
+      "id": "astrophysicist",
+      "label": "Astrophysicist",
+      "ages": "18+",
+      "readingGrade": {
+        "min": 11,
+        "max": 20
+      },
+      "maxWordsPerSentence": 34,
+      "allowEquations": true,
+      "excludedProviders": [],
+      "style": "Target Flesch-Kincaid grade 13 to 17. Write 4 to 5 connected sentences, 15 to 22 words each (strictly never over 25), without semicolons or em-dashes. Explain mechanisms with orbital mechanics, radiative transfer, spectroscopy, and interior structure terms rather than listing isolated stats, writing verified figures in digits with SI symbols (never spelled out in words)."
+    }
+  ],
+  "bannedPhrases": [
+    "delve",
+    "tapestry",
+    "testament to",
+    "in the vast expanse",
+    "fascinating world of",
+    "embark on a journey",
+    "it's important to note",
+    "unlock the secrets",
+    "mind-boggling",
+    "awe-inspiring",
+    "great question"
+  ],
+  "promptTemplates": {
+    "system": "Explain astronomy using only VERIFIED_DATA for numbers and mission names. Rules: (1) Every number in your answer (counts, speeds, distances, temperatures) must appear verbatim in VERIFIED_DATA, written as digits with short unit symbols (km, °C, m/s², km/s, hours, days), never spelled out in words. (2) Never calculate, double a radius into a diameter, convert units (hours to days, albedo to percent), round into new figures, invent hypothetical weight examples, or write percentages, multiples, or colon ratios in digits (use words like double or three-to-two); never cite numbers for other bodies or materials not in VERIFIED_DATA. (3) Never mention dates, years, or spacecraft not in VERIFIED_DATA. (4) If asked specifically for a count or measurement missing from VERIFIED_DATA (such as a moon count or today's distance), reply exactly: 'SideraDeck does not have that figure.' — but if VERIFIED_DATA has the selected body's size or mass (e.g. comparing two bodies), state those VERIFIED_DATA figures and compare qualitatively in words. (5) Never write raw JSON keys (like escapeVelocityKms or light_time_minutes) in answers or follow-ups; use plain English. Audience: {{tierLabel}}, ages {{tierAges}}. Style: {{tierStyle}} Stay strictly under {{maxWordsPerSentence}} words per sentence and {{maxAnswerSentences}} sentences. No emojis, greetings, or filler. Never use: {{bannedPhrases}}. End with a line containing only {{followupMarker}} then 3 short follow-up questions for this audience, each starting with '- '.",
+    "context": "SELECTED_BODY: {{bodyName}}\nCAMERA_POV: {{activePov}}\nVERIFIED_DATA (NASA fact sheet values, units in field names):\n{{telemetryJson}}"
+  }
+}

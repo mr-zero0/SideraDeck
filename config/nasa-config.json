@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "sources": {
+    "apod": {
+      "base": "api",
+      "path": "/planetary/apod",
+      "params": ["date"],
+      "needsKey": true
+    },
+    "neo": {
+      "base": "api",
+      "path": "/neo/rest/v1/feed/today",
+      "params": [],
+      "needsKey": true
+    },
+    "images": {
+      "base": "images",
+      "path": "/search",
+      "params": ["q", "media_type", "page_size"],
+      "needsKey": false
+    }
+  },
+  "maxParamLength": 120
+}

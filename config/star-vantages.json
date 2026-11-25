@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "sources": {
+    "hyg": "Positions, distances, absolute magnitudes and colour indices: HYG Database v4.1",
+    "radii": "Stellar radii (solar radii) from published interferometry / SED fits; see notes per star"
+  },
+  "stars": [
+    { "id": "proxima-centauri", "hygName": "Proxima Centauri", "name": "Proxima Centauri", "radiusSolar": 0.1542, "vantageDistanceAu": 0.05, "note": "Red dwarf; closest star to the Sun" },
+    { "id": "alpha-centauri-a", "hygName": "Rigil Kentaurus", "name": "Alpha Centauri A", "radiusSolar": 1.2234, "vantageDistanceAu": 1.2, "note": "Sun-like star in the nearest star system" },
+    { "id": "barnards-star", "hygName": "Barnard's Star", "name": "Barnard's Star", "radiusSolar": 0.187, "vantageDistanceAu": 0.05, "note": "Red dwarf with the largest known proper motion" },
+    { "id": "sirius", "hygName": "Sirius", "name": "Sirius A", "radiusSolar": 1.711, "vantageDistanceAu": 5, "note": "Brightest star in Earth's night sky" },
+    { "id": "vega", "hygName": "Vega", "name": "Vega", "radiusSolar": 2.5, "vantageDistanceAu": 7, "note": "Rapidly rotating A-type star; former pole star" },
+    { "id": "polaris", "hygName": "Polaris", "name": "Polaris", "radiusSolar": 37.5, "vantageDistanceAu": 40, "note": "Cepheid supergiant; Earth's current north star" },
+    { "id": "betelgeuse", "hygName": "Betelgeuse", "name": "Betelgeuse", "radiusSolar": 764, "vantageDistanceAu": 40, "note": "Red supergiant; its radius exceeds Mars's orbit" },
+    { "id": "rigel", "hygName": "Rigel", "name": "Rigel", "radiusSolar": 78.9, "vantageDistanceAu": 25, "note": "Blue supergiant in Orion" }
+  ]
+}

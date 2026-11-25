@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "source": "JPL Horizons (https://ssd.jpl.nasa.gov/horizons/), heliocentric ecliptic J2000 vectors",
+  "horizonsUrl": "https://ssd.jpl.nasa.gov/api/horizons.api",
+  "dataUrl": "/data/spacecraft.json",
+  "modelSource": "NASA 3D Resources (https://github.com/nasa/NASA-3D-Resources), NASA media usage guidelines",
+  "modelLightIntensity": 2.2,
+  "modelAmbientIntensity": 0.04,
+  "craft": [
+    { "id": "voyager-1", "name": "Voyager 1", "horizonsId": "-31", "start": "1989-06-01", "stop": "2036-01-01", "step": "30 d", "launched": "1977-09-05", "markerColor": "#e8d27a", "model": { "url": "https://raw.githubusercontent.com/nasa/NASA-3D-Resources/master/3D%20Models/Voyager%20Probe%20(A)/Voyager%20Probe%20(A).glb", "path": "/models/voyager.glb", "sizeM": 13, "pointsAt": "earth", "pointAxis": [0, 1, 0] } },
+    { "id": "voyager-2", "name": "Voyager 2", "horizonsId": "-32", "start": "2000-01-01", "stop": "2036-01-01", "step": "30 d", "launched": "1977-08-20", "markerColor": "#e8b77a", "model": { "url": "https://raw.githubusercontent.com/nasa/NASA-3D-Resources/master/3D%20Models/Voyager%20Probe%20(A)/Voyager%20Probe%20(A).glb", "path": "/models/voyager.glb", "sizeM": 13, "pointsAt": "earth", "pointAxis": [0, 1, 0] } },
+    { "id": "new-horizons", "name": "New Horizons", "horizonsId": "-98", "start": "2006-02-01", "stop": "2036-01-01", "step": "10 d", "launched": "2006-01-19", "markerColor": "#9cc3ff" },
+    { "id": "jwst", "name": "James Webb Space Telescope", "horizonsId": "-170", "start": "2022-01-26", "stop": "2030-01-01", "step": "1 d", "launched": "2021-12-25", "markerColor": "#f0c05a", "model": { "url": "https://raw.githubusercontent.com/nasa/NASA-3D-Resources/master/3D%20Models/James%20Webb%20Space%20Telescope%20(B)/James%20Webb%20Space%20Telescope%20(B).glb", "path": "/models/jwst.glb", "sizeM": 21.2, "pointsAt": "sun", "pointAxis": [0, -1, 0] } },
+    { "id": "parker-solar-probe", "name": "Parker Solar Probe", "horizonsId": "-96", "start": "2024-01-01", "stop": "2026-12-31", "step": "6 h", "launched": "2018-08-12", "markerColor": "#ff9f6a", "model": { "url": "https://raw.githubusercontent.com/nasa/NASA-3D-Resources/master/3D%20Models/Parker%20Solar%20Probe/Parker%20Solar%20Probe.glb", "path": "/models/parker-solar-probe.glb", "sizeM": 3, "pointsAt": "sun", "pointAxis": [0, 0, -1] } }
+  ]
+}

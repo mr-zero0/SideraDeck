@@ -1,0 +1,25 @@
+/* Design tokens. Tailwind v4 reads @theme as the single source of truth for utilities. */
+@theme {
+  --color-void: #06080d;
+  --color-panel: #0b0f17;
+  --color-hairline: rgb(255 255 255 / 0.1);
+  --color-hairline-strong: rgb(255 255 255 / 0.22);
+  --color-ink: #e6e9ef;
+  --color-ink-muted: #8b93a3;
+  --color-ink-faint: #5a6270;
+  --color-signal: #9cc3ff;
+  --color-warn: #f2b45a;
+
+  --font-sans: 'Inter Tight', 'Segoe UI', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Cascadia Mono', ui-monospace, monospace;
+
+  --text-micro: 0.6875rem;
+  --text-micro--line-height: 1rem;
+  --text-micro--letter-spacing: 0.08em;
+
+  --radius-panel: 4px;
+
+  --z-canvas: 0;
+  --z-hud: 10;
+  --z-overlay: 20;
+}

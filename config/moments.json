@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "moments": [
+    {
+      "id": "earthrise",
+      "title": "Full Earth over the Moon",
+      "blurb": "New Moon on Earth means full Earth on the Moon: 2 degrees wide, lighting the regolith with earthshine.",
+      "view": "v=vantage&b=moon&vk=body&vid=moon&el=12&t=earth&f=8&d=2026-12-09T00:52:00.000Z&r=1"
+    },
+    {
+      "id": "mars-blue-sunset",
+      "title": "Blue sunset on Mars",
+      "blurb": "Fine dust scatters blue light toward the Sun after sunset. Earth shines as the evening star.",
+      "view": "v=vantage&b=mars&vk=body&vid=mars&t=earth&f=60&d=2026-11-25T10:30:00.000Z&r=1"
+    },
+    {
+      "id": "pale-blue-dot",
+      "title": "Pale Blue Dot, 14 Feb 1990",
+      "blurb": "Voyager 1, about 40 AU out, looks back: Earth is a faint point barely 1.4 degrees from the Sun.",
+      "view": "v=vantage&b=earth&vk=craft&vid=voyager-1&t=earth&f=0.4&d=1990-02-14T04:48:00.000Z&r=0"
+    },
+    {
+      "id": "sun-from-alpha-centauri",
+      "title": "Our Sun from Alpha Centauri",
+      "blurb": "From the nearest star system the Sun is a magnitude 0.5 star in Cassiopeia.",
+      "view": "v=vantage&b=sun&vk=star&vid=alpha-centauri-a&t=sun&f=60&r=1"
+    },
+    {
+      "id": "betelgeuse",
+      "title": "Beside Betelgeuse",
+      "blurb": "A red supergiant wider than Mars's orbit, seen from 40 AU.",
+      "view": "v=vantage&b=sun&vk=star&vid=betelgeuse&t=vantage-star&f=60&r=1"
+    },
+    {
+      "id": "jwst-home",
+      "title": "Earth from JWST",
+      "blurb": "From the second Lagrange point, 1.5 million km out, Earth and Moon share the binocular field.",
+      "view": "v=vantage&b=earth&vk=craft&vid=jwst&t=earth&f=6&r=1"
+    }
+  ]
+}
