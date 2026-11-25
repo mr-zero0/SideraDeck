@@ -1,0 +1,18 @@
+node_modules
+dist
+.env
+.env.local
+.wrangler
+.cache
+*.log
+.dev.vars
+__pycache__
+.pytest_cache
+.venv
+# Local working notes, never committed
+COMMIT_PLAN.md
+.DS_Store
+.claude
+.cache
+# 8K textures (~tens of MB): fetched by npm run data:textures, not committed
+public/textures/hires/
